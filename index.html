@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="ORBIT — painel espacial simples para controlar e testar o volume de áudio.">
+    <title>ORBIT — Controle Espacial</title>
+  </head>
+  <body bgcolor="#080f18" text="#e8f1f5" link="#65dcea">
+    <font face="monospace">
+      <main>
+        <center>
+          <h1>ORBIT</h1>
+          <p>Controle Espacial</p>
+          <svg width="64" height="80" viewBox="0 0 64 80" role="img" aria-label="Espaçonave ORBIT">
+            <path d="M32 5 44 30 44 48 55 64 39 60 32 67 25 60 9 64 20 48 20 30Z" fill="#203141" stroke="#65dcea" stroke-width="2"/>
+            <circle cx="32" cy="32" r="6" fill="#65dcea"/>
+            <path d="M27 70v5M37 70v5" stroke="#65dcea" stroke-width="2"/>
+          </svg>
+          <p><font color="#65dcea"><span id="status" role="status">SISTEMA ONLINE</span></font></p>
+          <h2 aria-live="polite" aria-atomic="true">Volume: <span id="volume">50</span>%</h2>
+          <progress id="barra-volume" value="50" max="100" aria-label="Volume do sistema"></progress>
+          <p><small><span id="estado-audio" role="status">CANAL DE ÁUDIO ATIVO</span></small></p>
+          <table cellpadding="5" cellspacing="0" role="presentation">
+            <tr>
+              <td><button id="diminuir" type="button" aria-label="Diminuir volume" title="Diminuir volume em 5%">− DIMINUIR</button></td>
+              <td><button id="mudo" type="button" aria-pressed="false" title="Silenciar ou restaurar o volume">◖× MUDO</button></td>
+              <td><button id="aumentar" type="button" aria-label="Aumentar volume" title="Aumentar volume em 5%">+ AUMENTAR</button></td>
+            </tr>
+          </table>
+          <p><button id="testar" type="button">♫ TESTAR ÁUDIO</button></p>
+          <table cellpadding="6" cellspacing="0" role="presentation">
+            <tr>
+              <td><button id="iniciar" type="button">⏻ INICIAR SISTEMA</button></td>
+              <td><button id="resetar" type="button">↺ RESETAR</button></td>
+            </tr>
+          </table>
+        </center>
+      </main>
+    </font>
+    <script src="orbit.js"></script>
+  </body>
+</html>
